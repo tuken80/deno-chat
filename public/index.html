@@ -31,7 +31,7 @@
         // Websocket connection + events
         useEffect(() => {
             if (ws) ws.close()
-            ws = new WebSocket(`ws://${window.location.host}/ws`)
+            ws = new WebSocket(`ws://localhost:8080/ws`)
             ws.addEventListener('message', onReceiveMessage)
 
             return () => {
