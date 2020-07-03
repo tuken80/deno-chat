@@ -11,7 +11,8 @@ const config: DenonConfig = {
         'write',
         'net'
       ],
-      log: 'info'
+      log: 'info',
+      "unstable": true
     },
   },
 };
