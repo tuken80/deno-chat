@@ -1,3 +1,4 @@
-import { launchServer } from "./server.ts";
+import { DB } from "./services/db.ts";
+import { launchServer } from "./services/server.ts";
 
-launchServer();
+DB.init().then(() => launchServer());
