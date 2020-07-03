@@ -30,7 +30,7 @@
 
         // Websocket connection + events
         useEffect(() => {
-            ws = new WebSocket(`ws://localhost:8080/ws/chat`)
+            ws = new WebSocket(`ws://localhost:8080/ws/chat/socket`)
 
             ws.addEventListener('message', onReceiveMessage)
 

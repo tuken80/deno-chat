@@ -12,7 +12,6 @@ function broadcast(message: string, senderId?: string): void {
 
 export async function handleSocket(ws: WebSocket) {
     const userId = v4.generate();
-    console.log(userId);
 
     // Register user connection
     users.set(userId, ws);
@@ -21,8 +20,6 @@ export async function handleSocket(ws: WebSocket) {
     // Wait for new messages
     try {
         for await (const event of ws) {
-            console.log(event);
-
             if (typeof event === 'string') {
                 broadcast(event, userId);
             }
